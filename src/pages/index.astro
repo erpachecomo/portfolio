@@ -1,16 +1,22 @@
 ---
-
+import "../styles/global.css";
+import NavBar from "../components/NavBar.astro";
+import Welcome from "../components/Welcome.astro";
+import About from "../components/About.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Paxe</title>
+  </head>
+  <body class="flex flex-col min-h-screen bg-secondary text-white font-mono">
+    <NavBar />
+    <Welcome />
+    <About />
+
+  </body>
 </html>

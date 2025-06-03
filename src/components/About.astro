@@ -1,0 +1,44 @@
+---
+import Stats from "./Stats";
+
+const startDate = new Date("2017-06-01");
+const currentDate = new Date();
+const yearsOfExperience = currentDate.getFullYear() - startDate.getFullYear();
+const hasCompletedYear =
+  currentDate.getMonth() > startDate.getMonth() ||
+  (currentDate.getMonth() === startDate.getMonth() &&
+    currentDate.getDate() >= startDate.getDate());
+const totalYearsOfExperience = hasCompletedYear
+  ? yearsOfExperience
+  : yearsOfExperience - 1;
+---
+
+<section class="flex flex-col h-screen p-4 card" id="about">
+  <h1 class="text-4xl font-bold text-primary">
+    <span role="img" aria-label="computer">💻</span> Ernesto Pacheco #094
+  </h1>
+  <div class="flex flex-grow justify-between">
+    <div class="flex flex-col max-w-1/2">
+      <h2 class="text-2xl font-semibold mt-4 text-primary-dark">
+        <!-- Pokedev entry: --> Who is Ernesto?
+      </h2>
+
+      <p class="text-lg">
+        <span role="img" aria-label="arrow">➡️</span>
+        <b class="text-accent">Full-stack developer</b>, with {
+          totalYearsOfExperience
+        } years of experience, focused on web applications. I consider myself a team player
+        who enjoys mentoring and sharing knowledge with others. I have a strong
+        background in both frontend and backend development, which allows me to tackle
+        projects from multiple angles and deliver comprehensive solutions.
+        <!-- Ernesto is a versatile dual-type Pokémon excelling in both Frontend and Backend
+        environments. Known for its ability to craft intricate web applications and
+        automate complex processes, this Pokémon thrives in dynamic team settings.
+        Its friendly and mentoring nature inspires others, boosting team morale and
+        productivity. With a keen eye for detail, Ernesto weaves robust
+        code structures that withstand the toughest production challenges. -->
+      </p>
+    </div>
+    <Stats client:only="react" />
+  </div>
+</section>

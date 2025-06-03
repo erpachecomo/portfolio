@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import "tailwindcss";
+@import 'poke-ui-react/lib/poke-ui-react.css';
+
+
+@theme {
+  --color-primary-dark: rgb(102, 82, 128);
+  --color-primary-dark-opaque: rgba(102, 82, 128, 0.75);
+  --color-primary: rgb(142, 114, 176);
+  --color-secondary: rgb(52, 33, 52);
+  --color-accent: rgb(252, 92, 92);
+  --font-vt323: "VT323", monospace;
+}
+
+@layer components {
+  .card {
+    color: var(--color-secondary);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: var(--radius-lg);
+    padding: calc(var(--spacing) * 4);
+    margin: calc(var(--spacing) * 4);
+    box-shadow: var(--shadow-xl);
+  }
+}
+
+body {
+  /* background-image: linear-gradient(to right top, #342134, #452e48, #573d5e, #684c75, #795c8e, #795c8e, #795c8e, #795c8e, #684c75, #573d5e, #452e48, #342134); */
+  background: linear-gradient(
+    to right top,
+    #8e72b0,
+    #a96cae,
+    #c465a5,
+    #dc5e96,
+    #ee5980,
+    #e25376,
+    #d74d6c,
+    #cb4763,
+    #a33d61,
+    #7b3458,
+    #552b49,
+    #342134
+  );
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+body:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  background: linear-gradient(
+    to right bottom,
+    rgba(102, 82, 128, 0.2),
+    #8e72b0 75%
+  );
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
