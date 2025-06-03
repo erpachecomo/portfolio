@@ -20,7 +20,7 @@ const Stats: React.FC = () => (
           label={value.label}
           value={value.value}
           classNames={{
-            labelsContainer: "justify-between",
+            labelsContainer: "justify-between text-gray-800",
             barFill: "scale-in-hor-left bg-primary",
             bar: "bg-accent",
           }}
