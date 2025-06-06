@@ -5,36 +5,48 @@ import ghLogo from "../assets/gh-logo.svg";
 import io from "../assets/io.png";
 ---
 
-<section class="flex flex-col items-center h-screen p-4 card" id="home">
-  <Image
-    src={io}
-    alt="Ernesto Pacheco"
-    class="w-32 h-32 rounded-full mb-4 shadow-lg"
-  />
-  <h1 class="text-4xl font-bold text-primary">Welcome!</h1>
-  <p class="text-lg">
-    I am Ernesto Pacheco, a <b class="text-accent">Software Engineer</b> focused
-    on building exceptional web applications.
-  </p>
-  <p class="text-lg">Feel free to explore my portfolio and get in touch!</p>
-  <div class="flex">
-    <a
-      href="https://www.linkedin.com/in/ernestopachecomorelos/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="mt-6 mr-2 px-6 py-2 bg-white rounded-full shadow hover:bg-gray-100 transition-colors flex items-center"
-    >
-      <Image src={lnLogo} alt="LinkedIn logo" class="w-5 h-5"/>
-    </a>
-    <a
-      href="https://github.com/erpachecomo"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="mt-6 mr-2 px-6 py-2 bg-white rounded-full shadow hover:bg-gray-100 transition-colors flex items-center"
-    >
-      <Image src={ghLogo} alt="GitHub logo" class="w-5 h-5"/>
-      
-    </a>
+<section class="flex flex-col p-4 py-20 card" id="home">
+  <div class="flex flex-col justify-evenly md:flex-row">
+    <div class="flex flex-col items-center">
+      <Image
+        src={io}
+        alt="Ernesto Pacheco"
+        class="w-32 h-32 rounded-full mb-4 shadow-lg"
+      />
+      <h1 class="text-4xl font-bold text-primary">Welcome!</h1>
+      <div class="flex mb-8">
+        <a
+          href="https://www.linkedin.com/in/ernestopachecomorelos/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-6 mr-2 px-6 py-2 bg-white rounded-full shadow hover:bg-gray-100 transition-colors flex items-center"
+        >
+          <Image src={lnLogo} alt="LinkedIn logo" class="w-5 h-5" />
+        </a>
+        <a
+          href="https://github.com/erpachecomo"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-6 mr-2 px-6 py-2 bg-white rounded-full shadow hover:bg-gray-100 transition-colors flex items-center"
+        >
+          <Image src={ghLogo} alt="GitHub logo" class="w-5 h-5" />
+        </a>
+      </div>
+    </div>
+    <div class="hidden md:flex flex-col items-center mx-8">
+      <hr class="w-px h-48 bg-gray-300 border-0" />
+    </div>
+    <div class="flex flex-col justify-around">
+      <p class="text-2xl font-light">
+        I am Ernesto Pacheco, a <b class="text-accent">Software Engineer</b> focused
+        on building exceptional web applications.
+        <br />
+        Feel free to explore my portfolio and get in touch!
+      </p>
+      <p class="mt-4">
+        This app is also my playground to try new things and experiment with
+        different technologies.
+      </p>
+    </div>
   </div>
-  <p class="mt-18">This app is also my playground to try new things and experiment with different technologies.</p>
 </section>

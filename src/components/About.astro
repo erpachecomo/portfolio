@@ -15,28 +15,49 @@ const totalYearsOfExperience = hasCompletedYear
 
 <section class="flex flex-col h-screen p-4 card" id="about">
   <h1 class="text-4xl font-bold text-primary">
-    <span role="img" aria-label="computer">💻</span> Ernesto Pacheco #094
+    <span role="img" aria-label="computer">💻</span>
+    Who is Ernesto?
   </h1>
-  <div class="flex flex-grow justify-between">
-    <div class="flex flex-col max-w-1/2">
-      <h2 class="text-2xl font-semibold mt-4 text-primary-dark">
-        <!-- Pokedev entry: --> Who is Ernesto?
-      </h2>
-
-      <p class="text-lg">
+  <div class="flex flex-col lg:flex-row flex-grow justify-between">
+    <div class="flex flex-col lg:max-w-1/2 text-lg pt-4 pr-4 gap-6">
+      <p>
         <span role="img" aria-label="arrow">➡️</span>
         <b class="text-accent">Full-stack developer</b>, with {
           totalYearsOfExperience
-        } years of experience, focused on web applications. I consider myself a team player
-        who enjoys mentoring and sharing knowledge with others. I have a strong
+        } years of experience, focused on web applications. I consider myself a team
+        player who enjoys mentoring and sharing knowledge with others. I have a strong
         background in both frontend and backend development, which allows me to tackle
         projects from multiple angles and deliver comprehensive solutions.
-        <!-- Ernesto is a versatile dual-type Pokémon excelling in both Frontend and Backend
-        environments. Known for its ability to craft intricate web applications and
-        automate complex processes, this Pokémon thrives in dynamic team settings.
-        Its friendly and mentoring nature inspires others, boosting team morale and
-        productivity. With a keen eye for detail, Ernesto weaves robust
-        code structures that withstand the toughest production challenges. -->
+      </p>
+      <p>
+        <span role="img" aria-label="portfolio">🗂️</span>
+        I am currently working in <b class="text-accent"
+          ><a
+            href="https://www.luxoft.com"
+            target="_blank"
+            rel="noopener noreferrer">Luxoft</a
+          ></b
+        >, creating solutions in frontend for an investments company with
+        technologies like React, AWS, AG Grid, Plotly, Cypress, Python, among others.
+      </p>
+      <p>
+        <span role="img" aria-label="soccer-icon">⚽️</span>
+        Some of my <b class="text-accent">hobbies</b> include playing and watching
+        soccer, listening to almost any kind of music (check out my weekly recommendations
+        <a class="text-blue-500" href="/music">here!</a>).
+      </p>
+      <p>
+        <span role="img" aria-label="pixel-gaming">🕹️</span>
+        I'm also a big <b class="text-accent">Pokémon fan</b>! I enjoy playing
+        the games specially first 3 generations. It brings me a lot of nostalgia
+        since I used to play on my childhood.
+        <b class="text-accent">Guess who is my favorite Pokémon!</b>
+      </p>
+      <p>
+        <span role="img" aria-label="sunset">🌅</span>
+        I also admire sunsets, specially when they are over the sea and enjoy nature,
+        hiking and
+        <b class="text-accent">traveling</b> to new places.
       </p>
     </div>
     <Stats client:only="react" />
