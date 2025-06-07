@@ -1,0 +1,67 @@
+---
+import Stats from "../../components/Stats";
+
+const startDate = new Date("2017-06-01");
+const currentDate = new Date();
+const yearsOfExperience = currentDate.getFullYear() - startDate.getFullYear();
+const hasCompletedYear =
+  currentDate.getMonth() > startDate.getMonth() ||
+  (currentDate.getMonth() === startDate.getMonth() &&
+    currentDate.getDate() >= startDate.getDate());
+const totalYearsOfExperience = hasCompletedYear
+  ? yearsOfExperience
+  : yearsOfExperience - 1;
+---
+
+<section class="flex flex-col  p-4 card" id="about">
+  <h1 class="text-4xl font-bold text-primary">
+    <span role="img" aria-label="computer">💻</span>
+    Who is Ernesto?
+  </h1>
+  <div class="flex flex-col lg:flex-row flex-grow justify-between">
+    <div class="flex flex-col lg:max-w-1/2 text-lg pt-4 pr-4 gap-6">
+      <p>
+        <span role="img" aria-label="arrow">➡️</span>
+        <b class="text-accent">Full-stack developer</b>, with {
+          totalYearsOfExperience
+        } years of experience, focused on web applications. I consider myself a team
+        player who enjoys mentoring and sharing knowledge with others. I have a strong
+        background in both frontend and backend development, which allows me to tackle
+        projects from multiple angles and deliver comprehensive solutions.
+      </p>
+      <p>
+        <span role="img" aria-label="portfolio">🗂️</span>
+        I am currently working in <b class="text-accent"
+          ><a
+            href="https://www.luxoft.com"
+            target="_blank"
+            rel="noopener noreferrer">Luxoft</a
+          ></b
+        >, creating solutions in frontend for an investments company with
+        technologies like React, AWS, AG Grid, Plotly, Cypress, Python, among
+        others.
+      </p>
+      <p>
+        <span role="img" aria-label="soccer-icon">⚽️</span>
+        Some of my <b class="text-accent">hobbies</b> include playing and watching
+        soccer, listening to almost any kind of music 
+        <!-- (check out my weekly recommendations <a class="text-blue-500" href="/music">here!</a>) -->
+        .
+      </p>
+      <p>
+        <span role="img" aria-label="pixel-gaming">🕹️</span>
+        I'm a big <b class="text-accent">Pokémon fan</b>! I enjoy playing
+        the games specially the first 3 generations. It brings me a lot of nostalgia
+        since I used to play them on my childhood.
+        <b class="text-accent">Guess who is my favorite Pokémon!</b>
+      </p>
+      <p>
+        <span role="img" aria-label="sunset">🌅</span>
+        I also admire sunsets, specially when they are over the sea and enjoy nature,
+        hiking and
+        <b class="text-accent">traveling</b> to new places.
+      </p>
+    </div>
+    <Stats client:only="react" />
+  </div>
+</section>

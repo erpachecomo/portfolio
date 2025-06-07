@@ -1,22 +1,41 @@
 ---
 import "../styles/global.css";
-import NavBar from "../components/NavBar.astro";
-import Welcome from "../components/Welcome.astro";
-import About from "../components/About.astro";
+import NavBar from "./main/NavBar.astro";
+import Welcome from "./main/Welcome.astro";
+import About from "./main/About.astro";
+import Projects from "./main/Projects.astro";
+import Contact from "./main/Contact.astro";
 ---
 
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon-96x96.png"
+      sizes="96x96"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Paxe</title>
   </head>
-  <body class="flex flex-col min-h-screen bg-secondary text-white font-mono">
+  <body
+    class="flex flex-col min-h-screen bg-secondary text-white font-lato font-light bg-pan-top"
+  >
     <NavBar />
     <Welcome />
     <About />
-
+    <Projects />
+    <Contact />
   </body>
 </html>

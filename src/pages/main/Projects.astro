@@ -1,0 +1,56 @@
+---
+import type { CardMiniProps } from "poke-ui-react";
+import ProjectMini from "./ProjectMini.astro";
+import './Projects.css'
+
+const badgeClass = "bg-gradient-to-r from-primary to-secondary text-white text-xs uppercase p-4 m-1"
+
+const projects: CardMiniProps[] = [
+  {
+    label: "poke-ui-react",
+    description: "A component library for React inspired in Pokemon. This page uses components from there!",
+    img: "/poke-ui-logo.webp",
+    url: "https://github.com/erpachecomo/poke-ui-react",
+    badges: [
+      { value: "React", className: badgeClass },
+      { value: "Vite", className: badgeClass },
+      { value: "Tailwind", className: badgeClass },
+      { value: "Storybook", className: badgeClass },
+    ],
+  },
+  {
+    label: "RSS Aggregator",
+    description: "A simple RSS aggregator built with Go",
+    img: "https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Black.png",
+    url: "https://github.com/erpachecomo/rss-aggregator",
+    badges: [
+      { value: "Go", className: badgeClass },
+      { value: "Goose", className: badgeClass },
+      { value: "SQLC", className: badgeClass },
+      { value: "PostgreSQL", className: badgeClass },
+    ],
+  },
+];
+---
+
+<section class="flex flex-col card" id="projects">
+  <h1 class="text-4xl font-bold text-primary mb-8">
+    <span role="img" aria-label="projects">📂</span>
+    Projects
+  </h1>
+  <div class="flex flex-col lg:flex-row gap-8">
+    <div class="flex flex-col md:flex-row justify-center items-center w-full md:items-stretch">
+      {
+        projects.map((project) => (
+          <ProjectMini
+            label={project.label}
+            description={project.description}
+            img={project.img}
+            url={project.url}
+            badges={project.badges}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>
