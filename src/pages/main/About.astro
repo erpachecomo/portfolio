@@ -1,5 +1,5 @@
 ---
-import Stats from "./Stats";
+import Stats from "../../components/Stats";
 
 const startDate = new Date("2017-06-01");
 const currentDate = new Date();
@@ -13,7 +13,7 @@ const totalYearsOfExperience = hasCompletedYear
   : yearsOfExperience - 1;
 ---
 
-<section class="flex flex-col h-screen p-4 card" id="about">
+<section class="flex flex-col  p-4 card" id="about">
   <h1 class="text-4xl font-bold text-primary">
     <span role="img" aria-label="computer">💻</span>
     Who is Ernesto?
@@ -38,19 +38,21 @@ const totalYearsOfExperience = hasCompletedYear
             rel="noopener noreferrer">Luxoft</a
           ></b
         >, creating solutions in frontend for an investments company with
-        technologies like React, AWS, AG Grid, Plotly, Cypress, Python, among others.
+        technologies like React, AWS, AG Grid, Plotly, Cypress, Python, among
+        others.
       </p>
       <p>
         <span role="img" aria-label="soccer-icon">⚽️</span>
         Some of my <b class="text-accent">hobbies</b> include playing and watching
-        soccer, listening to almost any kind of music (check out my weekly recommendations
-        <a class="text-blue-500" href="/music">here!</a>).
+        soccer, listening to almost any kind of music 
+        <!-- (check out my weekly recommendations <a class="text-blue-500" href="/music">here!</a>) -->
+        .
       </p>
       <p>
         <span role="img" aria-label="pixel-gaming">🕹️</span>
-        I'm also a big <b class="text-accent">Pokémon fan</b>! I enjoy playing
-        the games specially first 3 generations. It brings me a lot of nostalgia
-        since I used to play on my childhood.
+        I'm a big <b class="text-accent">Pokémon fan</b>! I enjoy playing
+        the games specially the first 3 generations. It brings me a lot of nostalgia
+        since I used to play them on my childhood.
         <b class="text-accent">Guess who is my favorite Pokémon!</b>
       </p>
       <p>

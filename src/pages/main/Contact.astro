@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import lnLogo from "../../assets/ln-logo.png";
+import ghLogo from "../../assets/gh-logo.svg";
+---
+
+<section class="flex flex-col p-4 card" id="contact">
+  <h1 class="text-4xl font-bold text-primary">
+    <span role="img" aria-label="mail">📬</span>
+    Contact
+  </h1>
+  <div class="flex flex-col gap-y-4 md:flex-row text-lg justify-around my-8">
+    <a
+      class="text-blue-500 inline-flex items-center"
+      href="https://www.linkedin.com/in/ernestopachecomorelos/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Image src={lnLogo} alt="LinkedIn logo" class="w-5 h-5" />
+      /ernestopachecomorelos</a
+    >
+    <a
+      class="text-blue-500 inline-flex items-center"
+      href="https://github.com/erpachecomo"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Image src={ghLogo} alt="GitHub logo" class="w-5 h-5" />
+
+      /erpachecomo</a
+    >
+    <a
+      class="text-blue-500 inline-flex items-center"
+      href="mailto:contact@paxe.dev"
+    >
+      <span role="img" aria-label="email">✉️</span>
+      contact@paxe.dev</a
+    >
+  </div>
+</section>

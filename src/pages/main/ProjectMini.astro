@@ -1,0 +1,23 @@
+---
+import { CardMini, type CardMiniProps } from "poke-ui-react";
+
+const { label, description, img, url, badges } = Astro.props as CardMiniProps;
+---
+
+<CardMini
+  label={label}
+  description={description}
+  img={img}
+  url={url}
+  badges={badges}
+  urlText="View on GitHub"
+  classNames={{
+    container: "flex flex-col max-w-75 border border-gray-200 rounded-lg shadow-lg mr-4 ",
+    img: "h-32 w-32 object-cover",
+    content: "p-4",
+    label: "text-center",
+    description: "text-sm text-center text-gray-600",
+    link: "text-blue-500 hover:text-blue-700",
+  }}
+  client:only="react"
+/>
